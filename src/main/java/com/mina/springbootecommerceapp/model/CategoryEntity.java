@@ -11,23 +11,19 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "products")
+@Table(name = "Category")
 @Data
-public class ProductEntity {
+public class CategoryEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id")
-    private long productId;
+    private long categoryId;
 
     @NonNull
-    @Column(name = "product_name")
-    private String productName;
+    @Column(name = "category_name")
+    private String categoryName;
 
-    @Column(name = "product_desc")
-    private String productDescription;
-
-    @Column(name = "product_price")
-    private double productPrice;
-
+    @Column(name = "category_desc")
+    private String categoryDesc;
 }
